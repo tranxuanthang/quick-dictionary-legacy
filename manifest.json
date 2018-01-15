@@ -1,0 +1,51 @@
+{
+	"manifest_version": 2,
+	"name": "__MSG_ext_name__",
+	"description": "__MSG_ext_desc__",
+	"version": "1.2.6",
+	"icons": { "128": "/img/icon.png" },
+	"default_locale": "en",
+	"options_ui": {
+		"page": "config.html",
+		"chrome_style": true
+	},
+	"web_accessible_resources": [
+		"/img/icon.png",
+		"site.js"
+	],
+	"content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["content.js"],
+	  "css": ["content.css"]
+    }
+	],
+	"browser_action": {
+		"default_icon": "/img/icon.png",
+		"default_popup": "popup.html",
+		"default_title": "__MSG_ext_name__"
+	},
+	"permissions": [
+		"tabs",
+		"activeTab",
+		"https://*.wiktionary.org/",
+		"https://*.wikimedia.org/",
+		"https://translation.googleapis.com/",
+		"https://upload.wikimedia.org/",
+		"storage"
+	],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+Q",
+				"windows": "Ctrl+Shift+Q",
+				"mac": "Command+Shift+Q",
+				"linux": "Ctrl+Shift+Q"
+			}
+		}
+	}
+  
+}

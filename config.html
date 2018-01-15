@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+	<script src="localize.js"></script>
+	<style>html{font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;line-height: 1.3;font-size: 0.875rem;} body {width: 500px;} #error{color: red} #note{color: green} div{ margin: 7px 0;} .options{ margin: 7px 7px;} .title{font-weight: bold;}</style>
+  </head>
+
+  <body>
+
+    <form>
+        <div>
+			<div id="quickButtonDesc" class="title">Quick Button that shows right above your selected text:</div>
+			<div class="options">
+				<div><label><input type="radio" id="quickButtonYes" name="quickButton" value="1"> <span id="textQuickButtonYes">Yes</span></label></div>
+				<div><label><input type="radio" id="quickButtonNo" name="quickButton" value="0"> <span id="textQuickButtonNo">No</span></label></div>
+			</div>
+		</div>
+		<div>
+			<div id="wiktionaryLangDesc" class="title">Wiktionary Language (2 chars, example: vi, en, ru, ja,...):</div>
+			<div class="options">
+				<div><label><span id="wiktionaryLang1">Language #1 (required):</span> <div><input autocomplete="off" type="text" id="primlang" value="" maxlength="2"></div></label></div>
+				<div><label><span id="wiktionaryLang2">Language #2 (optional):</span> <div><input autocomplete="off" type="text" id="secolang" value="" maxlength="2"></div></label></div>
+			</div>
+		</div>
+		<div>
+			<button id="submit" type="submit">Submit</button>
+			<button id="goback">Go Back</button>
+		</div>
+		<div><div id="error"></div><div id="note"></div></div>
+    </form>
+
+    <script src="config.js"></script>
+	
+
+  </body>
+
+</html>

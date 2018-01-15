@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dictionary</title>
+		<script src="sanitizer.js" charset="UTF-8"></script>
+		<script src="popup.js" charset="UTF-8"></script>
+		<script src="localize.js" charset="UTF-8"></script>
+		<link rel="stylesheet" href="popup.css">
+		<link rel="stylesheet" href="popup-w.css">
+		<link rel="stylesheet" href="normalize.css">
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<div id="searchform">
+					<form target="_self" method="get" id="searchform">
+					<div id="simpleSearch">
+						<input type="text" name="text" id="searchInput" autocomplete="off" placeholder="Type something..." autofocus>
+						<input type="hidden" name="lang" id="lang">
+						<input type="hidden" name="nolower" id="nolower">
+						<input type="submit" name="go" value="Search" id="searchButton" class="searchButton">	
+					</div>
+					</form>
+				</div>
+				<div id="option"><span id="wiktionarylang"></span> (<a id="configLink" href="config.html">Config</a>)</div>
+			</div>
+			<div id="main-content"><div id="result"></div></div>
+			<button id="totop" title="Go to top">&#9650;</button>
+		</div>
+	</body>
+</html>

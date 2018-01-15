@@ -1,0 +1,7 @@
+#quickButton {
+	opacity: 0.6;
+}
+
+#quickButton:hover {
+	opacity: 1;
+}
